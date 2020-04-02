@@ -21,7 +21,8 @@ Advantage of using operation framework.
 
 - Clean coding
 - Limiting scope of each task
-- Easy editing / replacing behaviours
+- Easy editing 
+- Easy swapping / adding / replacing behaviours
 - Easy error handling
 - Easy debugging
 
@@ -36,5 +37,13 @@ Operation framework is made from 4 main components:
 - Operation Provider
 - Operation Data Model
 
+For more information and tutorial refer to the medium article
+
+## More Information
+
+for more information check out the [Medium Article ](https://medium.com/@amir.n3t/advanced-ios-app-developments-using-chained-operation-framework-cof-6edf5c066dba)
+
+## License
+[MIT](https://github.com/AmirKamali/OperationFramework-iOS/blob/master/LICENSE)
 
 

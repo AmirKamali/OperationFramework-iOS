@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OperationFramework_Example' do
+  pod 'OperationFramework', :path => '../'
+
+  target 'OperationFramework_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

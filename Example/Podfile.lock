@@ -1,0 +1,16 @@
+PODS:
+  - OperationFramework (0.1.0)
+
+DEPENDENCIES:
+  - OperationFramework (from `../`)
+
+EXTERNAL SOURCES:
+  OperationFramework:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  OperationFramework: 762c9e7005cc1515d6460e4e3a49d7261ccf0761
+
+PODFILE CHECKSUM: d6dafce60152fa67bf987d7e1b6958945f335f11
+
+COCOAPODS: 1.9.1

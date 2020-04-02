@@ -1,0 +1,22 @@
+{
+  "name": "OperationFramework",
+  "version": "0.1.0",
+  "summary": "A short description of OperationFramework.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Amir/OperationFramework",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Amir": "amir@kamali.io"
+  },
+  "source": {
+    "git": "https://github.com/Amir/OperationFramework.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "OperationFramework/Classes/**/*"
+}
