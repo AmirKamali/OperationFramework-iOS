@@ -72,9 +72,9 @@ open class ChainedOperation:ChainedOperationProtocol {
         self.delegates?.append(delegate)
     }
     
-    public func start(){
+    open func start(){
         DispatchQueue.main.async {
-            if !(self.controlDelegate?.canStart?(self) ?? true) {
+            if !(self.controlDelegate?.shouldStart?(self) ?? true) {
                 let error = OperationFailedError(reseon: "Can not start operation \(self.id)")
                 self.delegates?.forEach{$0.onOperationFailed(operation: self, error: error)}
                 return
@@ -88,7 +88,7 @@ open class ChainedOperation:ChainedOperationProtocol {
         }
     }
     
-    func freeup() {
+   open func freeup() {
         self.nextOperation = nil
         self.delegates = nil
         self.executionBlock = nil

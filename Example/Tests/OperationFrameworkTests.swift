@@ -13,10 +13,12 @@ import XCTest
 
 
 class OperationFrameworkTests: XCTestCase,ChainedOperationDelegate,ChainedOperationControlDelegate {
+    
     var runValue:Int = 0
     var runExpectation:XCTestExpectation?
-    var canStart: ((ChainedOperation) -> Bool)?
     var shouldSkip: ((ChainedOperation) -> Bool)?
+    var shouldStart: ((ChainedOperation) -> Bool)?
+
 
     
     func onOperationStart(operation: ChainedOperation) {
@@ -81,7 +83,7 @@ class OperationFrameworkTests: XCTestCase,ChainedOperationDelegate,ChainedOperat
         let operation = FakeOperation(runMode: mode)
         operation.addDelegate(delegate: self)
         operation.controlDelegate = self
-        canStart = { _ in return false}
+        shouldStart = { _ in return false}
         runExpectation =  expectation(description: "operation with Value\(mode.runValue)")
         operation.start()
         
@@ -101,7 +103,7 @@ class OperationFrameworkTests: XCTestCase,ChainedOperationDelegate,ChainedOperat
         XCTAssertEqual(self.runValue, RunMode.complete.runValue)
     }
     override func tearDown() {
-        self.canStart = nil
+        self.shouldStart = nil
         self.shouldSkip = nil
         self.runValue = 0
         self.runExpectation = nil

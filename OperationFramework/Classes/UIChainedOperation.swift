@@ -14,7 +14,7 @@ public protocol UIOperationProvider: OperationProvider {
 
 extension UIOperationProvider {
     
-    var navigationController: UINavigationController? {
+   public var navigationController: UINavigationController? {
         get {
             let result: UINavigationController? = readData(forKey: "navigationController")
             return result }

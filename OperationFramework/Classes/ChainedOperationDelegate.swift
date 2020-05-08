@@ -19,7 +19,7 @@ public protocol ChainedOperationDelegate {
 }
 
 public protocol ChainedOperationControlDelegate: class {
-    var canStart: ((ChainedOperation) -> Bool)? { get set }
+    var shouldStart: ((ChainedOperation) -> Bool)? { get set }
     
     var shouldSkip: ((ChainedOperation) -> Bool)? { get set }
 }

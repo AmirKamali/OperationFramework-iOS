@@ -76,7 +76,7 @@ open class OperationBuilderBase<T>:ChainedOperation, OperationBuilderProtocol wh
         operationInput = dataModel
     }
     
-    public override func start() {
+    open override func start() {
         if !operations.isEmpty {
             self.operations[0].start()
         }

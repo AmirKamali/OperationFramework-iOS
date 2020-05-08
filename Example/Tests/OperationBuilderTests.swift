@@ -9,11 +9,12 @@
 import XCTest
 import OperationFramework
 class OperationBuilderTests: XCTestCase,ChainedOperationControlDelegate,ChainedOperationDelegate {
+    
+    
     var builder:FakeOperationBuilder?
-    
-    var canStart: ((ChainedOperation) -> Bool)?
-    
+        
     var shouldSkip: ((ChainedOperation) -> Bool)?
+    var shouldStart: ((ChainedOperation) -> Bool)?
     
     func onBuilderRunComplete(operation: ChainedOperation) {
         

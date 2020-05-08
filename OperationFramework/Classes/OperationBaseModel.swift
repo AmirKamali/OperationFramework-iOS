@@ -9,7 +9,7 @@
 import Foundation
 
 public class OperationBaseModelDataContainer {
-    
+    public init() {}
     public var dataDictionary: [String: Any] = [:]
     
 }
